@@ -4,6 +4,8 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - name: clonging repo
+        run: actions/checkout@v3
       - name: my-step
         run: echo "Hello World!"
       - name: tell me the directory I am in
