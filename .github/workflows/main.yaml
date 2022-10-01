@@ -10,4 +10,5 @@ jobs:
         run: echo "Hello World!"
       - name: tell me the directory I am in
         run: pwd
-#       - name: 
+      - name: count the number in a file
+        run: wc -m hello
