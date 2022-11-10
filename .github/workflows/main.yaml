@@ -7,8 +7,15 @@ jobs:
       - name: clonging repo
         uses: actions/checkout@v3
       - name: my-step
-        run: echo "Hello World!"
+        run: echo "application_env=staging"
+        id: my-name
       - name: tell me the directory I am in
-        run: pwd
+        run: |
+        echo "ji"
+        echo applcation_env=${{steps.my-name.outputs}} 
       - name: count the number in a file
         run: wc -m hello
+
+
+        outputs: 
+
