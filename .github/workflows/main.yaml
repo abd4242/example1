@@ -15,10 +15,3 @@ jobs:
         run: |
           wc -m hello
           echo $APPLICATION_ENV
-
-
-
-
-
-
-echo PR_NUMBER=$(gh pr view --json number -q .number) >> $GITHUB_ENV
