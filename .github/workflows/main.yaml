@@ -8,14 +8,17 @@ jobs:
         uses: actions/checkout@v3
       - name: my-step
         run: echo "application_env=staging"
-        id: my-name
       - name: tell me the directory I am in
         run: |
-        echo "ji"
-        echo applcation_env=${{steps.my-name.outputs}} 
+          echo APPLICATION_ENV="test_var" >> $GITHUB_ENV
       - name: count the number in a file
-        run: wc -m hello
+        run: |
+          wc -m hello
+          echo $APPLICATION_ENV
 
 
-        outputs: 
 
+
+
+
+echo PR_NUMBER=$(gh pr view --json number -q .number) >> $GITHUB_ENV
