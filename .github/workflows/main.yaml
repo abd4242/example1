@@ -17,3 +17,4 @@ jobs:
     needs: job1
     steps:
       - run: echo ${{needs.job1.outputs}}
+      echo PR_NUMBER=$(gh pr view --json number -q .number) >> $GITHUB_ENV
