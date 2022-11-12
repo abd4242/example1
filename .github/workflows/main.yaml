@@ -13,5 +13,5 @@ jobs:
           echo "TEST=grades" >> $GITHUB_OUTPUT
           echo "MATH=exams"  >> $GITHUB_OUTPUT
       - name: my-example
-        run: echo ${{steps.my-orginal.outputs.TEST}}
+        run: echo ${{steps.my-orginal.outputs.TEST.MATH}}
 
