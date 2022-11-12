@@ -11,7 +11,7 @@ jobs:
         run: echo "application_env=staging"
       - name: tell me the directory I am in
         run: |
-          echo APPLICATION_ENV="test_var" >> $GITHUB_ENV
+          echo APPLICATION_ENV="hii my name is dullah" >> $GITHUB_ENV
       - name: count the number in a file
         run: |
           wc -m hello
