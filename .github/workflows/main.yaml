@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - id: my-orginal
-        run: step1
+        run: |
           echo "TEST=grades" >> $GITHUB_OUTPUT
           echo "MATH=exams"  >> $GITHUB_OUTPUT
       - name: my-example
