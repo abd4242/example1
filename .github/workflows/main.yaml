@@ -10,8 +10,8 @@ jobs:
     steps:
       - id: my-orginal
         run: step1
-          echo "TEST=grades" << $GITHUB_OUTPUT
-          echo "MATH=exams"  << $GITHUB_OUTPUT
+          echo "TEST=grades" >> $GITHUB_OUTPUT
+          echo "MATH=exams"  >> $GITHUB_OUTPUT
       - name: my-example
         run: echo ${{steps.my-orginal.outputs.TEST}}
 
