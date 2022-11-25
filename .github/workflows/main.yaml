@@ -13,7 +13,7 @@ jobs:
           echo "test=apple" >> $GITHUB_ENV
 
       - name: my-example
-        run: echo ${{steps.my-orginal.outputs.TEST}}/${CRA}
+        run: echo ${{steps.my-orginal.outputs.test}}/${CRA}
 
 env:
   CRA: ali
