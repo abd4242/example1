@@ -5,16 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      output1: ${{ steps.my-orginal.outputs.TEST }}
+      output1: ${{steps.my-orginal.outputs.test}}
 
     steps:
       - id: my-orginal
         run: |
-          echo "TEST=grades" >> $GITHUB_OUTPUT
-          echo "MATH=exams"  >> $GITHUB_OUTPUT
+          echo "test=apple" >> $GITHUB_ENV
+
       - name: my-example
         run: echo ${{steps.my-orginal.outputs.TEST}}/${CRA}
 
 env:
   CRA: ali
+
+  
+
 
